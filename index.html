@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>JS - Generate Color</title>
+  </head>
+  <body>
+    <div class="container">
+      <!--Display section Starts from here-->
+      <section class="section">
+        <div class="sectionHeader">
+          <h3 class="sectionTitle">Display Color</h3>
+          <button class="sectionHeaderAction">Random Color</button>
+        </div>
+        <div class="divider"></div>
+        <div class="colorDisplay"></div>
+      </section>
+      <!--Display section ends here-->
+
+      <!--Customize color area starts from here-->
+      <section class="section">
+        <section class="sectionHeader">
+          <h3 class="sectionTitle">Customize your Color</h3>
+          <button class="sectionHeaderAction" id="copy-to-clipboard">Copy To Clipboard</button>
+        </section>
+        <div class="divider"></div>
+        <div class="selectCopyMode">
+          <p class="lead">Select Copy Mode</p>
+          <div class="modeRadioGroup">
+            <div class="modeInputGroup">
+              <input type="radio" name="colorMode" id="colorModeHex" checked />
+              <label for="colorModeHex">Hex</label>
+            </div>
+
+            <div class="modeInputGroup">
+              <input type="radio" name="colorMode" id="colorModeRgb" />
+              <label for="colorModeRgb">RGB</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="selectedColorMode">
+          <div class="hexInputGroup">
+            <label for="inputHex" class="lead">Hex</label>
+            <input
+              type="text"
+              placeholder="dddeee"
+              id="input-hex"
+              class="textInput hexInput"
+            />
+            <div class="hexIcon">#</div>
+          </div>
+
+          <div class="rgbInputGroup">
+            <label for="inputRgb" class="lead">RGB</label>
+            <input
+              type="text"
+              placeholder="rgb(221, 222, 238"
+              id="input-rgb"
+              class="textInput"
+              disabled
+            />
+          </div>
+        </div>
+
+        <div class="colorSliders">
+          <p class="lead">Adjust RGB Colors</p>
+          <div class="colorSlidersGroup">
+            <div>
+              <div class="sliderLabelGroup">
+                <p>Red</p>
+                <p id="colorSliderRedLabel">221</p>
+              </div>
+              <input
+                type="range"
+                min="0"
+                max="255"
+                value="221"
+                class="colorSlider"
+                id="colorSliderRed"
+              />
+            </div>
+            <div>
+              <div class="sliderLabelGroup">
+                <p>Green</p>
+                <p id="colorSliderGreenLabel">222</p>
+              </div>
+              <input
+                type="range"
+                min="0"
+                max="255"
+                value="222"
+                class="colorSlider"
+                id="colorSliderGreen"
+              />
+            </div>
+            <div>
+              <div class="sliderLabelGroup">
+                <p>Blue</p>
+                <p id="colorSliderBlueLable">238</p>
+              </div>
+              <input
+                type="range"
+                min="0"
+                max="255"
+                value="238"
+                class="colorSlider"
+                id="colorSliderBlue"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
